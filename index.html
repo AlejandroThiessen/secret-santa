@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Secret Santa 🎅</title>
+  <meta name="description" content="Pull a name out of Santa's sack! A free, private Secret Santa draw for the whole family. Nobody gets their own name, and nobody can peek.">
+  <meta name="theme-color" content="#0a1330">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="🎅 Secret Santa">
+  <meta property="og:description" content="Open me when nobody's looking, then pull a name out of Santa's sack! 🤫">
+  <meta property="og:url" content="https://alejandrothiessen.github.io/secret-santa/">
+  <meta property="og:image" content="https://alejandrothiessen.github.io/secret-santa/img/preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Mountains+of+Christmas:wght@700&family=Patrick+Hand&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+  <div class="sky-stars" aria-hidden="true"></div>
+  <div class="hills" aria-hidden="true">
+    <svg viewBox="0 0 1440 160" preserveAspectRatio="xMidYMax slice" focusable="false">
+      <defs>
+        <linearGradient id="hillBack" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8aa1d8"/><stop offset="1" stop-color="#5b6fa8"/></linearGradient>
+        <linearGradient id="hillFront" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3f7ff"/><stop offset="1" stop-color="#c3d1ee"/></linearGradient>
+      </defs>
+      <path d="M0 86C180 46 360 58 540 82C740 108 930 48 1130 66C1270 80 1370 66 1440 56V160H0Z" fill="url(#hillBack)" opacity=".8"/>
+      <g fill="#123d2e">
+        <path d="M162 26L150.8 44H173.2ZM162 34.8L146.8 54.8H177.2ZM162 46L142.8 66H181.2Z"/>
+        <path d="M212 33L203.6 46.5H220.4ZM212 39.6L200.6 54.6H223.4ZM212 48L197.6 63H226.4Z"/>
+        <path d="M620 56L609.9 72.2H630.1ZM620 63.9L606.3 81.9H633.7ZM620 74L602.7 92H637.3Z"/>
+        <path d="M662 69L654.7 80.7H669.3ZM662 74.7L652.1 87.7H671.9ZM662 82L649.5 95H674.5Z"/>
+        <path d="M835 46L825.5 61.3H844.5ZM835 53.5L822.1 70.5H847.9ZM835 63L818.7 80H851.3Z"/>
+        <path d="M982 23L969.7 42.8H994.3ZM982 32.7L965.3 54.7H998.7ZM982 45L960.9 67H1003.1Z"/>
+        <path d="M1040 33L1031 47.4H1049ZM1040 40L1027.8 56H1052.2ZM1040 49L1024.6 65H1055.4Z"/>
+        <path d="M1311 35L1300.4 52.1H1321.6ZM1311 43.4L1296.6 62.4H1325.4ZM1311 54L1292.8 73H1329.2Z"/>
+        <path d="M1360 42L1352.2 54.6H1367.8ZM1360 48.2L1349.4 62.2H1370.6ZM1360 56L1346.6 70H1373.4Z"/>
+      </g>
+      <g transform="translate(746 62)">
+        <path d="M0 12L14 0L28 12Z" fill="#7a2a1f"/>
+        <rect x="3" y="12" width="22" height="14" fill="#5b3a29"/>
+        <rect x="7" y="15" width="7" height="6" rx="1" fill="#ffd56b"/>
+        <rect x="17" y="17" width="5" height="9" fill="#3a2418"/>
+        <path d="M-1 12.5L14 .5L29 12.5" fill="none" stroke="#f3f7ff" stroke-width="2.5" stroke-linejoin="round"/>
+      </g>
+      <path d="M0 122C240 92 430 102 650 118C860 134 1050 96 1250 104C1340 108 1400 112 1440 110V160H0Z" fill="url(#hillFront)"/>
+    </svg>
+  </div>
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <div class="lights" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand"><span aria-hidden="true">🎅</span> <span class="brand-name">Secret Santa</span></div>
+    <div class="toggles">
+      <button type="button" id="langBtn" class="pill">ES</button>
+      <button type="button" id="soundBtn" class="pill">🔊</button>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div id="sheet-root"></div>
+  <noscript><p class="noscript">This Secret Santa needs JavaScript turned on. / Este Santa Secreto necesita JavaScript.</p></noscript>
+
+  <script src="js/logic.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/fx.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
